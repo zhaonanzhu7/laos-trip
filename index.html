@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>老挝5天行程 — 万象·万荣·琅勃拉邦</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "Alibaba PuHuiTi 2.0", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f0f0f3;
+    color: #2c2c2c;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container { width:100%; max-width:1200px; }
+
+  .hero {
+    text-align: center;
+    padding: 50px 40px 40px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1a5632 0%, #2d8a4e 40%, #d4a440 100%);
+    color: #fff;
+    margin-bottom: 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(26,86,50,0.16);
+  }
+  .hero h1 { font-size: 34px; font-weight: 700; letter-spacing: 2px; position: relative; z-index:1; margin-bottom: 8px; }
+  .hero .subtitle { font-size: 14px; opacity: 0.9; letter-spacing: 2px; position: relative; z-index:1; }
+  .hero .meta-row { display:flex; justify-content:center; gap:24px; margin-top:20px; flex-wrap:wrap; position:relative; z-index:1; }
+  .hero .meta-item { font-size:13px; background:rgba(255,255,255,0.14); padding:6px 16px; border-radius:20px; }
+
+  .day-section { margin-bottom: 40px; }
+  .day-header { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+  .day-number {
+    width:46px; height:46px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; font-weight:700; color:#fff; flex-shrink:0;
+  }
+  .day-number.d1 { background:#1a5632; }
+  .day-number.d2 { background:#2d8a4e; }
+  .day-number.d3 { background:#d4a440; }
+  .day-number.d4 { background: linear-gradient(135deg, #2d8a4e, #d4a440); }
+  .day-number.d5 { background:#c0563d; }
+
+  .day-title { font-size:34px; font-weight:700; color:#1a5632; }
+  .day-date { font-size:14px; color:#999; margin-left:auto; }
+
+  .timetable {
+    width:100%; border-collapse:collapse; background:#fff; border-radius:14px;
+    overflow:hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+  .timetable thead th {
+    background:#f7f7f8; text-align:left; font-size:12px; color:#999;
+    font-weight:500; padding:12px 16px; border-bottom:2px solid #e8e8ea;
+  }
+  .timetable thead th:first-child { width:110px; }
+  .timetable thead th:nth-child(2) { width:70px; }
+  .timetable tbody td {
+    padding:14px 16px; font-size:14px; border-bottom:1px solid #f0f0f2;
+    vertical-align:top; line-height:1.6;
+  }
+  .timetable tbody td:first-child { color:#333; font-weight:600; white-space:nowrap; }
+  .timetable tbody td:nth-child(2) { color:#1a5632; font-weight:600; }
+  .timetable tbody td:nth-child(3) { color:#444; }
+  .timetable tbody td:nth-child(4) { color:#666; font-size:13px; min-width:180px; }
+  .timetable tbody tr:hover { background:#fafbfb; }
+
+  .tag {
+    display:inline-block; font-size:11px; padding:2px 8px; border-radius:8px;
+    margin-right:4px; font-weight:600;
+  }
+  .tag-flight { background:#e3f2fd; color:#1565c0; }
+  .tag-train { background:#e8f5e9; color:#2e7d32; }
+  .tag-activity { background:#fff3e0; color:#e65100; }
+  .tag-transit { background:#f3e5f5; color:#6a1b9a; }
+  .tag-hotel { background:#fce4ec; color:#880e4f; }
+
+  .notes-section {
+    background:#fff; border-radius:14px; padding:24px 28px;
+    margin-top:40px; box-shadow:0 2px 10px rgba(0,0,0,0.04);
+  }
+  .notes-section h2 { font-size:34px; font-weight:700; color:#1a5632; margin-bottom:16px; }
+  .notes-section p { font-size:13px; color:#888; line-height:1.8; }
+  .notes-section p strong { color:#555; }
+
+  @media (max-width:768px) {
+    .hero h1 { font-size:26px; }
+    .day-title { font-size:24px; }
+    .timetable thead th:first-child { width:70px; }
+    .timetable tbody td { padding:10px 8px; font-size:12px; }
+    .timetable tbody td:nth-child(4) { font-size:12px; min-width:auto; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <h1>万象 - 万荣 - 琅勃拉邦</h1>
+    <div class="subtitle">5天4晚 / 背包客 / 文化+自然</div>
+    <div class="meta-row">
+      <div class="meta-item">6.19 ~ 6.23</div>
+      <div class="meta-item">ZHAO NANZHU + SIHAN CHEN</div>
+      <div class="meta-item">中老铁路 + 飞机往返</div>
+      <div class="meta-item">4人结伴</div>
+    </div>
+  </div>
+
+  <!-- D1 -->
+  <div class="day-section">
+    <div class="day-header">
+      <div class="day-number d1">D1</div>
+      <div class="day-title">长途抵达日</div>
+      <div class="day-date">6月19日 周五 · 上海 → 昆明 → 万象 → 琅勃拉邦</div>
+    </div>
+    <table class="timetable">
+      <thead><tr><th>时间</th><th>类型</th><th>事项</th><th>详情</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>07:10</td><td><span class="tag tag-flight">航班</span></td>
+          <td>MU5824 上海浦东 → 昆明</td>
+          <td>T1, 经济舱, 07:10-10:35</td>
+        </tr>
+        <tr>
+          <td>10:35</td><td><span class="tag tag-transit">中转</span></td>
+          <td>抵达昆明</td>
+          <td>中转约1h20m</td>
+        </tr>
+        <tr>
+          <td>11:55</td><td><span class="tag tag-flight">航班</span></td>
+          <td>MU9631 昆明 → 万象 VTE</td>
+          <td>经济舱, 11:55-12:45</td>
+        </tr>
+        <tr>
+          <td>12:45</td><td><span class="tag tag-transit">入境</span></td>
+          <td>落地万象</td>
+          <td>落地签, 护照: EL****50 / EC****83</td>
+        </tr>
+        <tr>
+          <td>13:00-14:30</td><td><span class="tag tag-transit">中转</span></td>
+          <td>万象火车站</td>
+          <td>机场→火车站, 约1.5h空档</td>
+        </tr>
+        <tr>
+          <td>15:15-17:26</td><td><span class="tag tag-train">火车</span></td>
+          <td>C86 万象 → 琅勃拉邦</td>
+          <td>02车 16A(楠竹) 16B(Chen), 2h11m, 360,000K/人</td>
+        </tr>
+        <tr>
+          <td>17:26</td><td><span class="tag tag-hotel">入住</span></td>
+          <td>抵达琅勃拉邦</td>
+          <td>Baan Samsa Boutique Hotel, Kingkitsarath Rd, 住6.19-6.20</td>
+        </tr>
+        <tr>
+          <td>傍晚</td><td><span class="tag tag-activity">自由</span></td>
+          <td>琅勃拉邦夜市</td>
+          <td>Sisavangvong 大街, 手工织品/银器/灯笼, 素食自助 ~15,000K</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- D2 -->
+  <div class="day-section">
+    <div class="day-header">
+      <div class="day-number d2">D2</div>
+      <div class="day-title">琅勃拉邦市区 + 织布村</div>
+      <div class="day-date">6月20日 周六 · 琅勃拉邦</div>
+    </div>
+    <table class="timetable">
+      <thead><tr><th>时间</th><th>类型</th><th>事项</th><th>详情</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>05:30-06:30</td><td><span class="tag tag-activity">文化</span></td>
+          <td>清晨布施</td><td>Sisavangvong 大街, 橙袍僧侣化缘, 可购糯米饭参与(~20,000K), 禁用闪光灯</td>
+        </tr>
+        <tr>
+          <td>06:30-07:30</td><td><span class="tag tag-activity">本地生活</span></td>
+          <td>早市 Morning Market</td>
+          <td>本地人买卖鲜鱼/蔬菜, 比夜市更原生态</td>
+        </tr>
+        <tr>
+          <td>07:30-08:30</td><td><span class="tag tag-activity">早餐</span></td>
+          <td>回酒店早餐/休整</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>09:00-10:30</td><td><span class="tag tag-activity">寺庙</span></td>
+          <td>香通寺 Wat Xieng Thong</td>
+          <td>最古老精美寺庙, "生命之树"马赛克壁画, 30,000K</td>
+        </tr>
+        <tr>
+          <td>10:30-11:30</td><td><span class="tag tag-activity">寺庙</span></td>
+          <td>迈佛寺 + 维苏那拉寺</td>
+          <td>西瓜造型佛塔, 琅勃拉邦最古老寺庙之一, 20,000K</td>
+        </tr>
+        <tr>
+          <td>11:30-13:00</td><td><span class="tag tag-activity">午餐</span></td>
+          <td>古城午餐</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13:00-14:00</td><td><span class="tag tag-activity">博物馆</span></td>
+          <td>王宫博物馆</td>
+          <td>末代国王宫殿, Prabang 金佛, 30,000K</td>
+        </tr>
+        <tr>
+          <td>14:00-15:00</td><td><span class="tag tag-activity">手工艺</span></td>
+          <td>织布村 Ban Xang Khong</td>
+          <td>传统桑叶纸和丝绸编织村落, 观摩制作过程</td>
+        </tr>
+        <tr>
+          <td>15:00-16:00</td><td><span class="tag tag-activity">手工艺</span></td>
+          <td>Ock Pop Tok 编织中心</td>
+          <td>河边咖啡馆, 手工艺展示, 可选</td>
+        </tr>
+        <tr>
+          <td>16:00-17:30</td><td><span class="tag tag-activity">公益</span></td>
+          <td>UXO Lao Visitor Centre</td>
+          <td>未爆弹博物馆, 免费 (周一-周五, 6.20周六可能闭馆, 备选)</td>
+        </tr>
+        <tr>
+          <td>17:30-18:30</td><td><span class="tag tag-activity">日落</span></td>
+          <td>普西山 Mount Phousi</td>
+          <td>328级台阶, 360度古城日落, 30,000K</td>
+        </tr>
+        <tr>
+          <td>18:30-19:30</td><td><span class="tag tag-activity">晚餐</span></td>
+          <td>湄公河畔晚餐</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19:30-21:00</td><td><span class="tag tag-activity">自由</span></td>
+          <td>夜市或湄公河游船</td>
+          <td>游船: Nava Mekong Cruises, US$25-30/人</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- D3 -->
+  <div class="day-section">
+    <div class="day-header">
+      <div class="day-number d3">D3</div>
+      <div class="day-title">光西瀑布 → 万荣</div>
+      <div class="day-date">6月21日 周日 · 琅勃拉邦 → 万荣</div>
+    </div>
+    <table class="timetable">
+      <thead><tr><th>时间</th><th>类型</th><th>事项</th><th>详情</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>07:00-08:00</td><td><span class="tag tag-activity">早餐</span></td>
+          <td>酒店早餐, 退房</td>
+          <td>行李寄存前台或随身</td>
+        </tr>
+        <tr>
+          <td>08:00-08:45</td><td><span class="tag tag-transit">交通</span></td>
+          <td>拼车前往光西瀑布</td>
+          <td>共享 tuk-tuk ~US$6/人往返, 车程约45分钟</td>
+        </tr>
+        <tr>
+          <td>09:00-11:00</td><td><span class="tag tag-activity">自然</span></td>
+          <td>光西瀑布 Kuang Si Falls</td>
+          <td>三层叠瀑, 碧蓝水潭可游泳, 60,000K, 带泳衣和防滑鞋</td>
+        </tr>
+        <tr>
+          <td>09:00-11:00</td><td><span class="tag tag-activity">公益</span></td>
+          <td>黑熊保护区 Bear Rescue Centre</td>
+          <td>光西瀑布入口处, 救助被贩卖的亚洲黑熊, 免费(欢迎捐款)</td>
+        </tr>
+        <tr>
+          <td>11:00-12:00</td><td><span class="tag tag-activity">午餐</span></td>
+          <td>瀑布附近午餐</td>
+          <td>Green Jungle 餐厅或小吃摊</td>
+        </tr>
+        <tr>
+          <td>12:00-13:00</td><td><span class="tag tag-transit">交通</span></td>
+          <td>返回琅勃拉邦市区</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13:00-16:00</td><td><span class="tag tag-activity">自由</span></td>
+          <td>古城自由漫步</td>
+          <td>可选: 蝴蝶公园 ($10, 周四闭馆), Big Brother Mouse 公益英语角</td>
+        </tr>
+        <tr>
+          <td>16:00-17:00</td><td><span class="tag tag-transit">出发</span></td>
+          <td>前往琅勃拉邦火车站</td>
+          <td>距古城12km, 拼车~40,000K/人</td>
+        </tr>
+        <tr>
+          <td>18:35-19:31</td><td><span class="tag tag-train">火车</span></td>
+          <td>C85 琅勃拉邦 → 万荣</td>
+          <td>0h56m, 177,000K/人</td>
+        </tr>
+        <tr>
+          <td>19:31</td><td><span class="tag tag-hotel">入住</span></td>
+          <td>抵达万荣</td>
+          <td>入住酒店, 住6.21</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- D4 -->
+  <div class="day-section">
+    <div class="day-header">
+      <div class="day-number d4">D4</div>
+      <div class="day-title">万荣一日游 → 万象</div>
+      <div class="day-date">6月22日 周一 · 万荣 → 万象</div>
+    </div>
+    <table class="timetable">
+      <thead><tr><th>时间</th><th>类型</th><th>事项</th><th>详情</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>早上</td><td><span class="tag tag-hotel">退房</span></td>
+          <td>退房, 背包随身</td>
+          <td>行李随身携带, 玩完直接去车站</td>
+        </tr>
+        <tr>
+          <td>9:00-12:00</td><td><span class="tag tag-activity">一日游</span></td>
+          <td>上午: Tham Nam 水下溶洞 + 丛林滑索</td>
+          <td>当地团 TCK Adventure Trip, 轮胎探洞 / 雨林滑索</td>
+        </tr>
+        <tr>
+          <td>12:00-13:30</td><td><span class="tag tag-activity">午餐</span></td>
+          <td>团餐</td>
+          <td>老挝特色: 干巴面包 / 米饭 / 烤串</td>
+        </tr>
+        <tr>
+          <td>13:30-17:00</td><td><span class="tag tag-activity">一日游</span></td>
+          <td>下午: 蓝色泻湖 + 南松河皮划艇</td>
+          <td>游泳跳水 / 喀斯特峰林间漂流</td>
+        </tr>
+        <tr>
+          <td>17:00</td><td><span class="tag tag-transit">休整</span></td>
+          <td>回到市区</td>
+          <td>取包, 简单洗漱, 晚餐</td>
+        </tr>
+        <tr>
+          <td>19:35-20:28</td><td><span class="tag tag-train">火车</span></td>
+          <td>C85 万荣 → 万象</td>
+          <td>0h53m, 186,000K/人 (当天最晚班次)</td>
+        </tr>
+        <tr>
+          <td>20:30</td><td><span class="tag tag-hotel">入住</span></td>
+          <td>抵达万象</td>
+          <td>入住酒店, 住6.22</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- D5 -->
+  <div class="day-section">
+    <div class="day-header">
+      <div class="day-number d5">D5</div>
+      <div class="day-title">万象 → 返程</div>
+      <div class="day-date">6月23日 周二 · 万象 → 昆明 → 上海</div>
+    </div>
+    <table class="timetable">
+      <thead><tr><th>时间</th><th>类型</th><th>事项</th><th>详情</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>白天</td><td><span class="tag tag-activity">待定</span></td>
+          <td>景点待细化</td>
+          <td>笔记: 神木博物馆 / 香昆寺 / 塔銮寺 / 凯旋门 / 主席府 / 总理府</td>
+        </tr>
+        <tr>
+          <td>~13:00</td><td><span class="tag tag-transit">出发</span></td>
+          <td>前往万象机场</td>
+          <td>提前约2.5h到达机场</td>
+        </tr>
+        <tr>
+          <td>15:50</td><td><span class="tag tag-flight">航班</span></td>
+          <td>MU9646 万象 → 昆明</td>
+          <td>经济舱, 15:50-18:35</td>
+        </tr>
+        <tr>
+          <td>18:35</td><td><span class="tag tag-transit">中转</span></td>
+          <td>抵达昆明</td>
+          <td>中转约1h55m</td>
+        </tr>
+        <tr>
+          <td>20:30</td><td><span class="tag tag-flight">航班</span></td>
+          <td>MU5813 昆明 → 上海虹桥</td>
+          <td>T2, 经济舱, 20:30-23:25</td>
+        </tr>
+        <tr>
+          <td>23:25</td><td><span class="tag tag-transit">抵达</span></td>
+          <td>抵达上海</td>
+          <td>行程结束</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 住宿 -->
+  <div class="notes-section">
+    <h2>住宿</h2>
+    <table class="timetable" style="margin-top:12px;">
+      <thead><tr><th>日期</th><th>城市</th><th>酒店</th><th>地址</th></tr></thead>
+      <tbody>
+        <tr><td>6.19-6.20</td><td>琅勃拉邦</td><td>Baan Samsa Boutique Hotel</td><td>Kingkitsarath Rd, Luang Prabang</td></tr>
+        <tr><td>6.21</td><td>万荣</td><td colspan="2">待定</td></tr>
+        <tr><td>6.22</td><td>万象</td><td colspan="2">待定</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 火车备选 -->
+  <div class="notes-section">
+    <h2>火车备选时刻 (每日相同)</h2>
+    <p style="margin-bottom:14px;"><strong>已购:</strong> 6.19 C86 万象→琅勃拉邦 15:15-17:26 | 6.21 C85 琅勃拉邦→万荣 18:35-19:31 | 6.22 C85 万荣→万象 19:35-20:28</p>
+    <p><strong>琅勃拉邦 → 万荣 (每日):</strong> C91 12:28-13:34(177K) | D87 14:58-15:49(213K) | D83 18:11-19:02(213K) | C85 18:35-19:31(177K)<br>
+    <strong>万荣 → 万象 (每日):</strong> C91 13:38-14:31(186K) | D87 15:52-16:44(222K) | D83 19:06-19:59(222K) | C85 19:35-20:28(186K)</p>
+  </div>
+
+  <div class="notes-section" style="margin-top:20px;">
+    <h2>机票信息</h2>
+    <p><strong>去程 6.19:</strong> MU5824 PVG→KMG 07:10-10:35 + MU9631 KMG→VTE 11:55-12:45 | 票号: 781-9478579687 | 记录编号: KQYRY6<br>
+    <strong>返程 6.23:</strong> MU9646 VTE→KMG 15:50-18:35 + MU5813 KMG→SHA 20:30-23:25 | 机票款 CNY 433 + 税 CNY 1,718</p>
+  </div>
+
+</div>
+</body>
+</html>
